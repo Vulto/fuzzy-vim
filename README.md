@@ -1,8 +1,8 @@
 # fuzzy-vim
 Plugin for quickly open files using your prefered fuzzy search in neovim
 
-## install
-Download fuzzy-vim.lua to you lua folder 
+## Install
+Download fuzzy-vim.lua to your lua folder 
 
 And bind these shortcuts to start using
 
