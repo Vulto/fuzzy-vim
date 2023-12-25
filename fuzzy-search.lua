@@ -3,7 +3,7 @@ local M = {}
 
 M.FuzzySearch = function(vertical_split, horizontal_split)
     local width = vim.o.columns - 4
-    local height = 15
+    local height = 20
 
     if vim.o.columns >= 85 then
         width = 80
@@ -26,8 +26,7 @@ M.FuzzySearch = function(vertical_split, horizontal_split)
     )
 
     local file = vim.fn.tempname()
-    local command = 'find $HOME -type f | fzy -l 15'
-
+    local command = 'kis -f | fzf --reverse --height=100% --border=rounded --no-info --no-separator --scroll-off=10 --algo=v2 --preview "less {}"'
     command = command .. ' > ' .. file
 
     vim.fn.termopen(command, {
